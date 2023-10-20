@@ -11,7 +11,6 @@ function App() {
 
   socket.on("notify", payload =>{
     setLocation(payload)
-    console.log("location received");
     console.log(payload);
   })
   
@@ -20,16 +19,14 @@ function App() {
     console.log(user)
   socket.emit("location", user);
   }
+
   return (
     <>
-     
-     <input> </input>
-         
         <button className="btn"  onClick ={(e) =>sendLocation()}>
               send location2
         </button>
     </>
   );
-}
+  }
 
 export default App;
