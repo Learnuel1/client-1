@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 function App() {
   const [location, setLocation] = useState("");
-  const socket = io();
+  const socket = io("https://smartmuvas.onrender.com");
   const user ={userId: "87hjfgr453228", receiver: "12sf7834uioioi53424"};
   socket.emit("lock", user);
 
